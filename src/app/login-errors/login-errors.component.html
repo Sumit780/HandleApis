@@ -1,0 +1,24 @@
+<div class="container bg-secondary">
+    <h4>Login</h4>
+    <div class="row">
+        <div class="col">
+            <label>Username</label>
+            <input type="text" class="form-control" [(ngModel)]="name">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label>password</label>
+            <input type="password" class="form-control" name="password" [(ngModel)]="password">
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="submit()">Submit </button>
+</div>
+<div *ngIf="succes" [(ngModel)]="msg">
+    {{msg}}
+
+</div>
+<div *ngIf="error">
+    {{errmsg}}
+</div>

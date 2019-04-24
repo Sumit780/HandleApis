@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Edufact Student Details</h2>
+    <div class="row">
+        <div class="col-2 bg-light">
+            <div *ngFor="let checkbox of checkboxValue; let i = index;">
+                <input type="checkbox" name="checkbox" id="checkbox{{i}}" [(ngModel)]="checkbox.value" (change)="filter()">
+                <label for="checkbox{{i}}"> {{checkbox.name}}</label>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col bg-dark text-white">Name</div>
+                <div class="col bg-dark text-white">Course</div>
+            </div>
+            <div class="row" *ngFor="let studentData of studentInfoArray;let i = index;">
+                <div class="col border">{{studentData.name}}</div>
+                <div class="col border">{{studentData.course}}</div>
+            </div>
+        </div>
+    </div>
+
+</div>

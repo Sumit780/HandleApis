@@ -1,0 +1,16 @@
+<div class="container">
+    <h3>Students of VII-B</h3>
+    <div class="row">
+        <div class="col-2">
+            <button class="btn btn-dark text-white fa fa-sort" (click)="sortName()">name</button>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-dark text-white fa fa-sort" (click)="sortMaths()">maths</button>
+        </div>
+    </div>
+
+    <div class="row" *ngFor="let st of studentData">
+        <div class="col-2">{{st.name}}</div>
+        <div class="col-2">{{st.maths}}</div>
+    </div>
+</div>

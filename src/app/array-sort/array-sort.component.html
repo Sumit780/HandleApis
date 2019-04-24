@@ -1,0 +1,34 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-4">
+            <input type="text" class="form-control" [(ngModel)]="name">
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="arrayPush()">Add Data</button>
+
+    <div *ngFor="let names of student">
+        {{names}}
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <label>New  Student</label>
+            <input type="text" class="form-control" [(ngModel)]="name">
+            <br>
+            <button class="btn btn-primary" (click)="addName()">Add Student</button>
+            <br>
+            <select class="form-control" [(ngModel)]="sortDropDownItem" (click)="itemSort()">
+                
+    <option  *ngFor="let values of sortDropDown">{{values}}</option>
+</select>
+        </div>
+    </div>
+
+    <div *ngFor="let names of arrtemp">
+        {{names}}
+    </div>
+
+</div>

@@ -1,0 +1,59 @@
+<!-- <div>
+    <input type="number" class="form-control" [(ngModel)]="name">
+    <div>
+        number :{{name|number:'1.0-0'}}
+    </div>
+    <div>
+        number :{{name|number:'1.0-1'}}
+    </div>
+    <div>
+        number :{{name|number:'1.0-2'}}
+    </div>
+</div> -->
+<!-- <div>
+    <input type="text" class="form-control" [(ngModel)]="date1">
+    <div>
+        Date :{{date1|date:'M/d/yy'}}
+    </div>
+    <div>
+        Date :{{date1|date:'MMMM d,yy'}}
+    </div>
+    <div>
+        Date :{{date1|date:'EEEE,MMMM d,yy'}}
+    </div>
+    <div>
+        Date :{{date1|date:'M/d/y'}}
+    </div>
+    <div>
+        Date :{{date1|date:'d MMM y'}}
+    </div>
+    <div>
+        Date :{{date1|date:'M-d-y'}}
+    </div>
+</div> -->
+<div class="container">
+
+    <div class="row">
+        <div class="col-2 bg-dark text-white">
+            Name
+        </div>
+        <div class="col-2 bg-dark text-white">
+            Price
+        </div>
+        <div class="col-2 bg-dark text-white">
+            Quantity
+        </div>
+    </div>
+    <div class="row" *ngFor="let d of data">
+        <div class="col-2 border">
+            {{d.name|uppercase}}
+        </div>
+        <div class="col-2 border">
+            {{d.price|number:'1.0-1'}}
+        </div>
+        <div class="col-2 border">
+            {{d.qty|number:'1.0-2'}}
+        </div>
+    </div>
+    Total Value of Bill:{{totalBill()|number:'1.0-2'}}
+</div>

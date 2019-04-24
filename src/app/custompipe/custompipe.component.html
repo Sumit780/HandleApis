@@ -1,0 +1,15 @@
+<!-- <div *ngFor="let n1 of names">
+    {{n1|short:4}}
+</div> -->
+
+<div class="container">
+    <h2>Edufact Students:{{dlen}}</h2>
+    <div class="row " *ngFor="let c of names">
+        <div class="col border">
+            {{c}}
+        </div>
+        <div class="col border">
+            {{c|short}}
+        </div>
+    </div>
+</div>

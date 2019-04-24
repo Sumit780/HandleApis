@@ -1,0 +1,20 @@
+<div class="container">
+    <h4 class="text-center">Student Data</h4>
+    <div class="row">
+        <div class="col">
+            <select class="form-control" (focus)="getData()" (focus)="findIndex()" [(ngModel)]="dataModel">
+            <option *ngFor="let values of firstUrlFetch">{{values.classid}}</option>
+            </select>
+        </div>
+
+    </div>
+    <div class=" row text-center">
+        <div class="col text-center text-white bg-dark ">Name</div>
+        <div class="col text-center text-white bg-dark ">Maths</div>
+
+    </div>
+    <div class="row text-center" *ngFor="let values of secondUrlFetch">
+        <div class="col border">{{values.name}}</div>
+        <div class="col border">{{values.maths}}</div>
+    </div>
+</div>

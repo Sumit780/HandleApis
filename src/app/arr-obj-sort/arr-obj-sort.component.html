@@ -1,0 +1,13 @@
+<div class="container">
+    <h4>List of Students</h4>
+    <button class="btn btn-primary m-1" (click)="sort(0)">No Sort</button>
+    <button class="btn btn-primary m-1" (click)="sort(1)">High Comp</button>
+    <button class="btn btn-primary m-1" (click)="sort(2)">Low Comp</button>
+    <div class="row" *ngFor="let st of showStudents">
+        <div class="col-3 border">{{st.name}}</div>
+        <div class="col-3 border">{{st.course}}</div>
+        <div class="col-3 border">{{st.lessons}}</div>
+        <div class="col-3 border">{{st.comp}}</div>
+
+    </div>
+</div>

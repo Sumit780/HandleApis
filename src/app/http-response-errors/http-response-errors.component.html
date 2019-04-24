@@ -1,0 +1,32 @@
+ {{namer|json}}
+<div class="conteiner">
+
+    <div class="row text-center">
+        <div class="col-3">
+
+        </div>
+
+        <div class="col-3">
+            <button class="btn btn-primary" (click)="fetch()">Fetch</button>
+        </div>
+        <div class="col-3">
+            <button class="btn btn-danger" (click)="fetcherr()">Fetch error</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="row ">
+        <div class="col-3 text-success ">
+
+        </div>
+        <div class="col-3 text-success border">
+            {{names}}
+        </div>
+        <div class="col-3 text-danger border">
+            {{error}}
+        </div>
+
+    </div>
+</div>

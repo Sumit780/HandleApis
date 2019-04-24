@@ -1,0 +1,14 @@
+<!-- <div class="container">
+    <button class="btn btn-primary" (click)="filtervalues()">Filter</button>
+    <div *ngFor="let num of val ">
+        {{num}}
+    </div>
+</div> -->
+
+
+<div class="container">
+    <input type="text" [(ngModel)]="srch" (keyup)="show()" (focus)="show()" (focusout)="noshow" class="form-control">
+    <div *ngIf="toshow">
+        <div *ngFor="let c of showCourses">{{c}}</div>
+    </div>
+</div>
